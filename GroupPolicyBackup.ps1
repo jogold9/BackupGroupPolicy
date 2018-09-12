@@ -19,7 +19,7 @@ Get-GPO -All | foreach { Backup-GPO -Name $_.DisplayName -Path $PathName -Commen
 # Enter a number to indicate how many days old the identified file needs to be (must have a "-" in front of it).
 $HowOld = -60
 
-#Delete folders and files older than 45 days
+#Delete folders and files older than 60 days
 #Remove the "-WhatIf" at the end, else the script will only show the files rather than delete them.
 
 get-childitem $PathName -recurse | where {$_.lastwritetime -lt (get-date).adddays($HowOld) -and -not $_.psiscontainer} |% {remove-item $_.fullname -force}
