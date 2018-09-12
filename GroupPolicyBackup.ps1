@@ -17,7 +17,7 @@ $PathName = "D:\SomeFolder\IT\Group Policy\Backups"
 Get-GPO -All | foreach { Backup-GPO -Name $_.DisplayName -Path $PathName -Comment $_.DisplayName }
 
 # Enter a number to indicate how many days old the identified file needs to be (must have a "-" in front of it).
-$HowOld = -45
+$HowOld = -60
 
 #Delete folders and files older than 45 days
 #Remove the "-WhatIf" at the end, else the script will only show the files rather than delete them.
