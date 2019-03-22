@@ -3,7 +3,6 @@
 
 #Use these two lines if you want to force the script to follow Powershell best practices
 Set-StrictMode -Version Latest
-$ErrorActionPreference = 'Stop'
 
 #Use this line if you want to push through any errors without screen output
 #$ErrorActionPreference = "SilentlyContinue"
